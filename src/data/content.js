@@ -3,12 +3,22 @@ export const paragraphs = [
   "Currently building DeenBase, a full-featured Islamic companion app covering Quran reading, Hadith browsing, Dhikr tools, and AI-powered Quran search. designed and shipped entirely solo, with a complete CI/CD pipeline and GitHub Releases automation."
 ];
 
-export const experiences = [];
+export const experiences = [
+  {
+    start: "Student",
+    end: "Present",
+    position: "Independent Developer",
+    company: "Personal Projects",
+    companyUrl: "https://github.com/aftab7xt",
+    description: "Building and maintaining various Android and web applications. Handling the complete lifecycle from UI/UX design to deployment and open-source publishing.",
+    skills: ['Kotlin', 'Jetpack Compose', 'Git', 'HTML', 'CSS', 'Tailwind CSS']
+  }
+];
 
-export const skills = [];
+export const skills = ['Kotlin', 'Jetpack Compose', 'Git', 'HTML', 'CSS', 'Tailwind CSS'];
 
 export const socialLinks = [
   { id: 'github', label: 'GitHub', url: 'https://github.com/aftab7xt', icon: 'github' },
   { id: 'gitlab', label: 'GitLab', url: 'https://gitlab.com/aftab7xt', icon: 'gitlab' },
-  { id: 'email', label: 'Email', url: 'mailto:your@email.com', icon: 'email' }
+  { id: 'email', label: 'Email', url: 'mailto:skaftaballi32@gmail.com', icon: 'email' }
 ];

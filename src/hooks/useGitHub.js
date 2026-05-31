@@ -21,9 +21,15 @@ export default function useGitHub(username) {
       })
       .then(data => {
         if (isMounted) {
-          const nonForked = data.filter(repo => repo.fork === false);
-          const sorted = nonForked.sort((a, b) => b.stargazers_count - a.stargazers_count);
-          setRepos(sorted.slice(0, 6));
+          const targetRepos = ['deenbase-app', 'settlr', 'commit'];
+          const filtered = data.filter(repo => {
+            const lowerName = repo.name.toLowerCase();
+            return targetRepos.some(target => lowerName.includes(target));
+          });
+          
+          // Sort them by stars or just take them as is (already sorted by update from API)
+          const sorted = filtered.sort((a, b) => b.stargazers_count - a.stargazers_count);
+          setRepos(sorted);
         }
       })
       .catch(err => {
