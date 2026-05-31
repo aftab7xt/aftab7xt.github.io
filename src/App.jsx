@@ -1,14 +1,8 @@
-import React from 'react';
-import { Analytics } from "@vercel/analytics/react";
+import useTheme from './hooks/useTheme';
 import HomeScreen from './screens/HomeScreen';
 
-function App() {
-  return (
-    <>
-      <HomeScreen />
-      <Analytics />
-    </>
-  );
-}
+export default function App() {
+  const [isDark, toggleTheme] = useTheme();
 
-export default App;
+  return <HomeScreen isDark={isDark} onToggleTheme={toggleTheme} />;
+}
