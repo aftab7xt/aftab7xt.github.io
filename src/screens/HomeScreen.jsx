@@ -5,6 +5,7 @@ import LeftPanel from '../components/LeftPanel';
 import TopBar from '../components/TopBar';
 import ExperienceCard from '../components/ExperienceCard';
 import ProjectCard from '../components/ProjectCard';
+import WorkInProgress from '../components/WorkInProgress';
 import { Github, Linkedin, Mail, Sun, Moon, ExternalLink } from 'lucide-react';
 
 const GitLabIcon = ({ size = 20 }) => (
@@ -203,6 +204,10 @@ export default function HomeScreen({ isDark, onToggleTheme }) {
               View all projects on GitHub
               <ExternalLink size={14} />
             </a>
+
+            <div className="mt-16">
+              <WorkInProgress />
+            </div>
           </div>
 
           {/* Footer Section */}
